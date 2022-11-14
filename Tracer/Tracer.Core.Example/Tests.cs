@@ -13,7 +13,6 @@ public class Test
 
         Tracer tracer = new();
 
-
         A1 a1 = new(tracer);
         a1.a();
 
