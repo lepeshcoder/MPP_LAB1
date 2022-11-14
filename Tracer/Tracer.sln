@@ -5,13 +5,13 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracer.Example", "Tracer.Example\Tracer.Example.csproj", "{5498C28F-285A-46A0-9579-C36C7720F484}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.Core", "Tracer.Core\Tracer.Core.csproj", "{5FFD50D5-69C2-4480-87B8-078DC565C987}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracer.Core", "Tracer.Core\Tracer.Core.csproj", "{5FFD50D5-69C2-4480-87B8-078DC565C987}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.Core.Example", "Tracer.Core.Example\Tracer.Core.Example.csproj", "{159CECBB-BE1C-46B2-B3E9-F73DE0B67C63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracer.Core.Tests", "Tracer.Core.Example\Tracer.Core.Tests.csproj", "{159CECBB-BE1C-46B2-B3E9-F73DE0B67C63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.Serialization", "Tracer.Serialization\Tracer.Serialization.csproj", "{1F53086C-AC81-47DE-A701-607CFAC05690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracer.Serialization", "Tracer.Serialization\Tracer.Serialization.csproj", "{1F53086C-AC81-47DE-A701-607CFAC05690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.Serialization.Abstractions", "Tracer.Serialization.Abstractions\Tracer.Serialization.Abstractions.csproj", "{92A42079-CB39-4D1C-8F5B-AE51E1590817}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracer.Serialization.Abstractions", "Tracer.Serialization.Abstractions\Tracer.Serialization.Abstractions.csproj", "{92A42079-CB39-4D1C-8F5B-AE51E1590817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace Tracer.Core.Example
+namespace Tracer.Core.Tests
 {
     public class UnitTest1
     {
