@@ -1,4 +1,5 @@
-﻿using Tracer.Serialization.Abstractions;
+﻿using Tracer.Core;
+using Tracer.Serialization.Abstractions;
 
 namespace Tracer.Serialization.Json
 {

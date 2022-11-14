@@ -8,9 +8,9 @@ namespace Tracer.Core
 {
     public class TraceResult
     {
-        public IReadOnlyDictionary<int, > Threads { get; }
+        public IReadOnlyDictionary<int, ThreadInfo> Threads { get; }
 
-        public TraceResult(IReadOnlyDictionary<int, > threads) => Threads = threads;
+        public TraceResult(IReadOnlyDictionary<int, ThreadInfo> threads) => Threads = threads;
 
     }
 }
