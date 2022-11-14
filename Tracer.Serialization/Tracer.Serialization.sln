@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.Serialization.Json", "Tracer.Serialization.Json\Tracer.Serialization.Json.csproj", "{77C144E7-6A08-4775-B4E7-635F257F169E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.Serialization.Xml", "Tracer.Serialization.Xml\Tracer.Serialization.Xml.csproj", "{FABDC7C0-0625-4B70-9E92-CD04211A69B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.Serialization.Yaml", "Tracer.Serialization.Yaml\Tracer.Serialization.Yaml.csproj", "{61DF7DD0-412E-4FA8-A7A6-8549AECF1BFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77C144E7-6A08-4775-B4E7-635F257F169E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C144E7-6A08-4775-B4E7-635F257F169E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C144E7-6A08-4775-B4E7-635F257F169E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C144E7-6A08-4775-B4E7-635F257F169E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FABDC7C0-0625-4B70-9E92-CD04211A69B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABDC7C0-0625-4B70-9E92-CD04211A69B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABDC7C0-0625-4B70-9E92-CD04211A69B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABDC7C0-0625-4B70-9E92-CD04211A69B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DF7DD0-412E-4FA8-A7A6-8549AECF1BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DF7DD0-412E-4FA8-A7A6-8549AECF1BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DF7DD0-412E-4FA8-A7A6-8549AECF1BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DF7DD0-412E-4FA8-A7A6-8549AECF1BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86E1C0C3-7960-4F63-9428-1A64C2A94C19}
+	EndGlobalSection
+EndGlobal
