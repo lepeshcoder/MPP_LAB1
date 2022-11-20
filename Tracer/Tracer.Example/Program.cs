@@ -16,7 +16,7 @@ internal class Program
 
         var t2 = new Thread(() =>
         {
-            pup.PupMethod();
+            pup.PupMethod(5,"lepesh");
         });
 
         t1.Start();
@@ -50,7 +50,7 @@ public class Foo
         _tracer.StartTrace();
         Thread.Sleep(50);
         _bar.InnerMethod();
-        _pup.PupMethod();
+        _pup.PupMethod(5,"lepesh");
         _tracer.StopTrace();
     }
 }
@@ -81,7 +81,7 @@ public class Pup
         _tracer = tracer;
     }
 
-    public void PupMethod()
+    public void PupMethod(int a, string b)
     {
         _tracer.StartTrace();
         Thread.Sleep(50);

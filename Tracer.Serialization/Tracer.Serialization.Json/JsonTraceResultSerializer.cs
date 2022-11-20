@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Tracer.Core;
@@ -31,12 +32,19 @@ namespace Tracer.Serialization.Json
         public class _MethodInfo
         {
 
-            public _MethodInfo(MethodInfo method)
+            public _MethodInfo(Core.MethodInfo method)
             {
-
+                a = 100;
                 name = method.MethodName;
                 Class = method.MethodClass;
-                time = $"{method.StopWatch.ElapsedMilliseconds}ms";
+                time = $"{method.StopWatch.ElapsedMilliseconds}"; 
+                Parameters = new();
+                foreach (var param in method.Parameters)
+                {
+                     Console.WriteLine(param.Name?.ToString()+ " " + param.ParameterType.ToString());
+                     Parameters.Add((param.Name?.ToString()+ " " + param.ParameterType.ToString()));
+                }
+               
                 if (method.InnerMethods != null)
                 {
                     this.methods = new List<_MethodInfo>();
@@ -49,13 +57,20 @@ namespace Tracer.Serialization.Json
                 {
                     this.methods = null;
                 }
+                
             }
             public String name { get; set; }
 
-            [JsonPropertyName("class")]
+            [JsonPropertyName("хуйня")]
             public String Class { get; set; }
 
             public String time { get; set; }
+
+            [JsonPropertyName("хуйня1")]
+            public int a { get; set; }
+
+            [JsonPropertyName("params")]
+            public List<String> Parameters { get; set; }
 
             public List<_MethodInfo>? methods { get; set; }
         }

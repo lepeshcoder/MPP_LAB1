@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-
+using System.Reflection;
 
 namespace Tracer.Core
 {
@@ -15,16 +15,19 @@ namespace Tracer.Core
 
         public string MethodClass { get; }
 
+        public List<ParameterInfo> Parameters { get; } = new();
+
         public Stopwatch StopWatch { get; }
 
         // Лист со вложенными методами
         public List<MethodInfo> InnerMethods { get; } = new();
 
-        public MethodInfo(string methodName, string methodClass, Stopwatch stopWatch)
+        public MethodInfo(string methodName, string methodClass, Stopwatch stopWatch, List<ParameterInfo> parameters)
         {
             MethodName = methodName;
             MethodClass = methodClass;
             StopWatch = stopWatch;
+            Parameters = parameters;
         }
     }
 }

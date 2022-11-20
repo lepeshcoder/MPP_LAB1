@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,9 +32,10 @@ namespace Tracer.Core
             var stackTraceInfo = stackTrace.GetFrame(1)!.GetMethod();
             String methodName = stackTraceInfo!.Name;
             String className = stackTraceInfo.DeclaringType!.Name;
+            List<ParameterInfo> parameters = stackTraceInfo.GetParameters().ToList();
 
             Stopwatch stopwatch = new();
-            var methodInfo = new MethodInfo(methodName, className, stopwatch);
+            var methodInfo = new MethodInfo(methodName, className, stopwatch, parameters);
 
             if (threadInfo.RunningMethods.Count != 0)
             {
