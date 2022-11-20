@@ -34,14 +34,12 @@ namespace Tracer.Serialization.Json
 
             public _MethodInfo(Core.MethodInfo method)
             {
-                a = 100;
                 name = method.MethodName;
                 Class = method.MethodClass;
                 time = $"{method.StopWatch.ElapsedMilliseconds}"; 
                 Parameters = new();
                 foreach (var param in method.Parameters)
                 {
-                     Console.WriteLine(param.Name?.ToString()+ " " + param.ParameterType.ToString());
                      Parameters.Add((param.Name?.ToString()+ " " + param.ParameterType.ToString()));
                 }
                
@@ -61,16 +59,11 @@ namespace Tracer.Serialization.Json
             }
             public String name { get; set; }
 
-            [JsonPropertyName("хуйня")]
             public String Class { get; set; }
 
             public String time { get; set; }
 
-            [JsonPropertyName("хуйня1")]
-            public int a { get; set; }
-
-            [JsonPropertyName("params")]
-            public List<String> Parameters { get; set; }
+            public List<string> Parameters { get; set; }
 
             public List<_MethodInfo>? methods { get; set; }
         }

@@ -36,6 +36,11 @@ namespace Tracer.Serialization.Yaml
                 this.name = method.MethodName;
                 this.Class = method.MethodClass;
                 this.time = $"{method.StopWatch.ElapsedMilliseconds}ms";
+                Parameters = new();
+                foreach (var param in method.Parameters)
+                {
+                    Parameters.Add((param.Name?.ToString()+ " " + param.ParameterType.ToString()));
+                }
                 if (method.InnerMethods != null)
                 {
                     this.methods = new List<_MethodInfo>();
@@ -54,6 +59,8 @@ namespace Tracer.Serialization.Yaml
             public String Class;
 
             public String time;
+
+            public List<string> Parameters { get; set; }
 
             public List<_MethodInfo>? methods;
         }

@@ -46,10 +46,15 @@ namespace Tracer.Serialization.Xml
             }
             public method(MethodInfo method)
             {
-
+                
                 this.name = method.MethodName;
                 this.Class = method.MethodClass;
                 this.time = $"{method.StopWatch.ElapsedMilliseconds}ms";
+                Parameters = new();
+                foreach (var param in method.Parameters)
+                {
+                    Parameters.Add((param.Name?.ToString()+ " " + param.ParameterType.ToString()));
+                }
                 if (method.InnerMethods != null)
                 {
                     this.methods = new List<method>();
@@ -75,6 +80,9 @@ namespace Tracer.Serialization.Xml
 
             [XmlElement(ElementName = "method")]
             public List<method>? methods;
+
+            [XmlElement(ElementName = "params")]
+            public List<string> Parameters { get; set; }
         }
 
         private List<thread> _ThreadResultToList(TraceResult traceResult)
