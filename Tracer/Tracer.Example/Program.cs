@@ -34,8 +34,9 @@ internal class Program
 public class Foo
 {
     private Bar _bar;
-
+    
     private Pup _pup;
+    
     private ITracer _tracer;
 
     internal Foo(ITracer tracer)

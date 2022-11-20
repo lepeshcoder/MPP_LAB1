@@ -33,6 +33,7 @@ namespace Tracer.Core
             String methodName = stackTraceInfo!.Name;
             String className = stackTraceInfo.DeclaringType!.Name;
             List<ParameterInfo> parameters = stackTraceInfo.GetParameters().ToList();
+            
 
             Stopwatch stopwatch = new();
             var methodInfo = new MethodInfo(methodName, className, stopwatch, parameters);
